@@ -1,4 +1,3 @@
-// import axios from 'axios'
 const state = {
     users: [
         { id: 1, name: "hello", date: 5000 },
