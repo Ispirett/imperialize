@@ -2,17 +2,19 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
+    <user-form/>
     <UsersContainer/>
   </div>
 </template>
 
 <script>
 import UsersContainer from "./containers/UsersContainer.vue";
-
+import UserForm from "./components/UserForm.vue";
 export default {
   name: 'App',
   components: {
-    UsersContainer
+    UsersContainer,
+    UserForm
   }
 }
 </script>
