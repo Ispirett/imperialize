@@ -1,4 +1,4 @@
-# Imperial Wallet
+# Imperialize
 
 #### Simple wallet built with vue
 
