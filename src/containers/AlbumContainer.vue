@@ -57,6 +57,10 @@ export default {
     width: 60%;
     margin: 0 auto;
    /* height: 60em;*/
+
   }
+ h1{
+   padding-top: 2em;
+ }
 
 </style>

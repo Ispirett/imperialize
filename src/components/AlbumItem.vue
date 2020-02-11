@@ -2,7 +2,7 @@
     <sui-card>
         <sui-image :src="image" />
         <sui-card-content extra>
-            Rating: <sui-rating icon="star" :max-rating="4" :rating="4" />
+            Rating:  <sui-rating :rating="4" :max-rating="5" />
         </sui-card-content>
     </sui-card>
 </template>

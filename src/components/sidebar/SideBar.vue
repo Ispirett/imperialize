@@ -13,7 +13,7 @@
 </template>
 
 <script>
-    import ArtistItem from "./sidebar/ArtistItem";
+    import ArtistItem from "./ArtistItem";
     export default {
         name: "SideBar",
         components:{

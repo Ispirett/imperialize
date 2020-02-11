@@ -1,6 +1,7 @@
 <template>
   <div id="app">
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
+    <left-side-bar/>
     <side-bar />
 <!--    <user-form/>-->
    <AlbumContainer/>
@@ -10,10 +11,12 @@
 <script>
 import AlbumContainer from "./containers/AlbumContainer";
 // import UserForm from "./components/UserForm.vue";
-import SideBar from "./components/SideBar";
+import SideBar from "./components/sidebar/SideBar";
+import LeftSideBar from "./components/sidebar/LeftSideBar";
 export default {
   name: 'App',
   components: {
+      LeftSideBar,
     AlbumContainer,
     SideBar
   }
