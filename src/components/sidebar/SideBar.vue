@@ -27,6 +27,7 @@
  #sidebar{
      float: right;
      /*background: rgb(30, 35, 41);*/
+     background: rgb(18, 24, 29);
      color: white;
      min-width: 20em;
      margin-top: 3.5em;

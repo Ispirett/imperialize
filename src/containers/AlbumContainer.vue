@@ -1,7 +1,9 @@
 <template>
   <div id="albums">
+    <album-item-small/>
     <h1>New albums & Singles</h1>
-    <sui-card-group :items-per-row="5" >
+
+    <sui-card-group :items-per-row="5" class="card-group" >
       <album-item image="https://resources.tidal.com/images/632ecaef/a635/4bda/9bbf/d3ee320a7c17/320x320.jpg"/>
       <album-item image="https://thegospelguru.com/wp-content/uploads/2017/06/81VIIvooGL._SL1500_.jpg"/>
       <album-item image="https://thegospelguru.com/wp-content/uploads/2017/06/600x600bb-2.jpg"/>
@@ -31,6 +33,7 @@
 <script>
 import {mapGetters, mapActions} from 'vuex'
 import AlbumItem from "../components/AlbumItem";
+import AlbumItemSmall from "../components/sidebar/AlbumItemSmall";
 
 // import Album from "../components/Album";
 
@@ -44,6 +47,7 @@ export default {
     user: Object
   },
   components: {
+    AlbumItemSmall,
     AlbumItem
 
 
@@ -53,11 +57,15 @@ export default {
 </script>
 
 <style scoped>
-  #albums{
-    width: 60%;
+  #albums {
+    max-width: 62%;
     margin: 0 auto;
-   /* height: 60em;*/
-
+    height: 65em;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .card-group{
+    padding: 1em;
   }
  h1{
    padding-top: 2em;
