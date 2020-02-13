@@ -5,6 +5,7 @@
     <side-bar />
 <!--    <user-form/>-->
    <AlbumContainer/>
+      <player-container/>
   </div>
 </template>
 
@@ -13,9 +14,11 @@ import AlbumContainer from "./containers/AlbumContainer";
 // import UserForm from "./components/UserForm.vue";
 import SideBar from "./components/sidebar/SideBar";
 import LeftSideBar from "./components/sidebar/LeftSideBar";
+import PlayerContainer from "./containers/PlayerCotainer";
 export default {
   name: 'App',
   components: {
+      PlayerContainer,
       LeftSideBar,
     AlbumContainer,
     SideBar
