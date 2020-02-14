@@ -3,15 +3,15 @@
     <div id="media-buttons">
       <input
         type="image"
-        src="https://upload.wikimedia.org/wikipedia/commons/9/96/Crystal_Project_Player_play.png"
-        v-on:click="play()"
-        id="play_button"
-      />
-      <input
-        type="image"
         src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Crystal_Project_Player_pause.png"
         v-on:click="pause()"
         id="pause_button"
+      />
+      <input
+              type="image"
+              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Crystal_Project_Player_play.png"
+              v-on:click="play()"
+              id="play_button"
       />
       <input
         type="image"
@@ -87,9 +87,12 @@ export default {
 input[type="image"]
 {
   float:left;
-  height:40px;
+  height:35px;
   margin-left:2px;
   margin-right:5px;
   margin-top:2px;
 }
+  #play_button{
+    height: 40px;
+  }
 </style>

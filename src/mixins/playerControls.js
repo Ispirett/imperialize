@@ -15,9 +15,8 @@ export default {
             player.currentTime = 0;
             this.$store.commit('updateCurrentTime', 0 );
             this.$store.commit('updateDuration', 0);
-            this.$store.commit('updateShowPlayer', true)
-            const playerContainer = document.getElementById('player');
-            playerContainer.classList.remove('show');
+            this.$store.commit('updateShowPlayer', false)
+
     }
 
     }

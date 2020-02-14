@@ -8,6 +8,7 @@ export default new Vuex.Store({
     fileSource: 'https://cdns-preview-e.dzcdn.net/stream/c-e1b78fb28633b45fd0a4b35478386198-7.mp3',
     currentTime: 0,
     trackDuration: 0,
+    volume: 1,
     leftSideBar: {
       artistImage:'https://thegospelguru.com/wp-content/uploads/2017/06/81VIIvooGL._SL1500_.jpg'
     },
@@ -41,6 +42,13 @@ export default new Vuex.Store({
         image: 'https://lasentinel.net/wp-content/uploads/sites/5/2016/02/rel-deonkipping-album-cover.jpg',
         mp3:'https://cdns-preview-c.dzcdn.net/stream/c-c3135df9d27931726c4a003a27e8773e-6.mp3',
       },
+      {
+        id:5,
+        image: 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/367760d4-aa89-46bb-988a-3e82ee97a9f7/d5gya4r-9342fbf5-2d56-439e-8771-6e23bd6be4f5.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzM2Nzc2MGQ0LWFhODktNDZiYi05ODhhLTNlODJlZTk3YTlmN1wvZDVneWE0ci05MzQyZmJmNS0yZDU2LTQzOWUtODc3MS02ZTIzYmQ2YmU0ZjUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.BntD9nv2OALUkm91DHkOopfy1a9n4CvUNmbnXqiPOtk',
+        mp3:'https://cdns-preview-9.dzcdn.net/stream/c-9d2d2c50be5d0980b9123d79056b5815-6.mp3',
+        title: 'Never Ending',
+        artist:'Rihanna'
+      },
 
     ]
   },
@@ -59,6 +67,9 @@ export default new Vuex.Store({
     },
     updateShowPlayer(state,value){
       state.showPlayer = value
+    },
+    updateVolume(state,value){
+      state.volume = value
     }
   },
   actions: {

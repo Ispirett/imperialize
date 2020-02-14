@@ -1,10 +1,7 @@
 <template>
-    <div id="wrapper" >
-        <div id='player'  class="player">
-            <audio id="i-player" >
-                <source :src="fileSource" id="file-source"/>
-            </audio>
-
+    <div id="wrapper" v-bind:class="{show:showPlayer}">
+        <div id='player' >
+            <player-audio/>
             <div>
                 <h4>Song that's currently playing</h4>
                 <small>Yeah that song!</small>
@@ -14,7 +11,7 @@
 
             <div>
                 <img src="https://img.favpng.com/0/18/16/volume-computer-icons-sound-icon-blue-orange-png-favpng-XqsMMyAsWPv0vQjgRR8a8ddDe.jpg" id="vol_img">
-                <input type="range" id="change_vol" onchange="change_vol()" step="0.05" min="0" max="1" value="1">
+                <input type="range" id="change_vol"  @input="tester($event.target.value)" step="0.05" min="0" max="1" :value="volume">
             </div>
 
 
@@ -25,20 +22,26 @@
 <script>
     import PlayerButtons from "../components/media_player/PlayerButtons";
     import playerControls from "../mixins/playerControls";
+    import PlayerAudio from "../components/media_player/PlayerAudio";
 
     export default {
         name:'PlayerContainer',
         computed:{
-            fileSource(){
-                return this.$store.state.fileSource
+            showPlayer(){
+                return this.$store.state.showPlayer
+            },
+            volume(){
+                return this.$store.state.volume
             }
         },
         methods:{
-          showPlayer(){
-              if(this.$store.state.showPlayer === true) 'show'
-          }
+            tester(value){
+              this.$store.commit('updateVolume',value);
+              document.getElementById('i-player').volume = this.volume;
+                console.log(this.volume)
+            }
         },
-        components: {PlayerButtons},
+        components: {PlayerAudio, PlayerButtons},
         mixins: [playerControls]
     }
 </script>
@@ -55,19 +58,22 @@
 
     .show{
         bottom: 0 !important;
+        transition: all 1ms ease-in-out;
     }
+
     #wrapper
     {
         width:100vw;
         height: 8em;
         position: fixed;
-        bottom: 0 ;
+        bottom: -8em;
         text-align:center;
         margin:0 auto;
         padding:0;
         background: linear-gradient(-90deg, #1d1d1d, #343434,#1d1d1d,);
+        transition: all 1s ease-in-out;
     }
-    .player
+    #player
     {
         color: white;
         display: flex;
