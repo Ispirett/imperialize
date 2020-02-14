@@ -21,15 +21,28 @@
       />
     </div>
     <div id="media-seek">
-      <input type="range" id="seek" step="0.01" min="0" max="1" />
+      <span id="seek-current-time">
+       0 : {{currentTime}}
+      </span>
+      <input type="range" id="seek" step="0.01" min="0" :max="trackDuration" :value="currentTime" />
+      <span id="seek-duration">0 : {{trackDuration}}</span>
     </div>
   </div>
 </template>
 
 <script>
-  import playerControls from "../../mixins/playerControls";
+import playerControls from "../../mixins/playerControls";
 export default {
   name: "PlayerButtons",
+  computed:{
+    currentTime(){
+      return this.$store.state.currentTime
+    },
+    trackDuration(){
+      return this.$store.state.trackDuration
+    }
+
+  },
   mixins:[playerControls],
 };
 </script>
@@ -44,6 +57,7 @@ export default {
   #media-buttons {
     margin-bottom: 1em;
   }
+
   #seek {
     outline: none;
     -webkit-appearance: none;
@@ -63,6 +77,12 @@ export default {
       margin-top: -3px;
     }
   }
+}
+#seek-current-time{
+  margin-right: 1em;
+}
+#seek-duration{
+  margin-left: 1em;
 }
 input[type="image"]
 {

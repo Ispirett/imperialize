@@ -1,8 +1,8 @@
 <template>
-    <div id="wrapper">
-        <div id='player'>
+    <div id="wrapper" >
+        <div id='player'  class="player">
             <audio id="i-player" >
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"/>
+                <source :src="fileSource" id="file-source"/>
             </audio>
 
             <div>
@@ -25,8 +25,19 @@
 <script>
     import PlayerButtons from "../components/media_player/PlayerButtons";
     import playerControls from "../mixins/playerControls";
+
     export default {
         name:'PlayerContainer',
+        computed:{
+            fileSource(){
+                return this.$store.state.fileSource
+            }
+        },
+        methods:{
+          showPlayer(){
+              if(this.$store.state.showPlayer === true) 'show'
+          }
+        },
         components: {PlayerButtons},
         mixins: [playerControls]
     }
@@ -41,18 +52,22 @@
         font-family:helvetica;
 
     }
+
+    .show{
+        bottom: 0 !important;
+    }
     #wrapper
     {
         width:100vw;
         height: 8em;
         position: fixed;
-        bottom:0;
+        bottom: 0 ;
         text-align:center;
         margin:0 auto;
         padding:0;
         background: linear-gradient(-90deg, #1d1d1d, #343434,#1d1d1d,);
     }
-    #player
+    .player
     {
         color: white;
         display: flex;

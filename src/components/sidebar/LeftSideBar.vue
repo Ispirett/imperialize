@@ -3,7 +3,7 @@
 
         <div class="artist-image">
             <sui-image
-                    src="https://thegospelguru.com/wp-content/uploads/2017/06/81VIIvooGL._SL1500_.jpg"
+                    :src="artistImage"
                     size="small"
                     circular
             />
@@ -18,7 +18,12 @@
 
 <script>
     export default {
-        name: "LeftSideBar"
+        name: "LeftSideBar",
+        computed:{
+            artistImage(){
+                return this.$store.state.leftSideBar.artistImage
+            }
+        }
     }
 </script>
 

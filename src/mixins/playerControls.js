@@ -1,25 +1,24 @@
-
 export default {
-    data () {
-       return {
-           fileSource: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
-           playerRef: ''
-       }
-    },
-
     methods:{
         play(){
-           console.log('play');
-            document.getElementById('i-player').play()
+            const player  = document.getElementById('i-player')
+            player.play();
+            console.log('play', player.duration);
 
         },
         pause() {
             document.getElementById('i-player').pause()
         },
         stop(){
-            document.getElementById('i-player').pause()
-            document.getElementById('i-player').currentTime = 0;
-        }
+            const player =   document.getElementById('i-player')
+            player.pause();
+            player.currentTime = 0;
+            this.$store.commit('updateCurrentTime', 0 );
+            this.$store.commit('updateDuration', 0);
+            this.$store.commit('updateShowPlayer', true)
+            const playerContainer = document.getElementById('player');
+            playerContainer.classList.remove('show');
+    }
 
     }
 }

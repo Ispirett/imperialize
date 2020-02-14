@@ -15,8 +15,10 @@ import AlbumContainer from "./containers/AlbumContainer";
 import SideBar from "./components/sidebar/SideBar";
 import LeftSideBar from "./components/sidebar/LeftSideBar";
 import PlayerContainer from "./containers/PlayerCotainer";
+import store from './store/index'
 export default {
   name: 'App',
+    store,
   components: {
       PlayerContainer,
       LeftSideBar,
