@@ -1,6 +1,6 @@
 <template>
   <div id="albums">
-    <album-item-small/>
+    <top-songs-container/>
     <h1>New albums & Singles</h1>
 
     <sui-card-group :items-per-row="5" class="card-group"  >
@@ -24,7 +24,7 @@
 <script>
 // import {mapGetters, mapActions} from 'vuex'
 import AlbumItem from "../components/AlbumItem";
-import AlbumItemSmall from "../components/sidebar/AlbumItemSmall";
+import TopSongsContainer from "./TopSongsContainer";
 
 // import Album from "../components/Album";
 
@@ -36,14 +36,9 @@ export default {
       return this.$store.state.music
     }
   },
-  props: {
-    user: Object
-  },
   components: {
-    AlbumItemSmall,
+    TopSongsContainer,
     AlbumItem
-
-
 
   }
 };
