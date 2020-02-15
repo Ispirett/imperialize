@@ -23,19 +23,27 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
  #sidebar{
-     float: right;
-     /*background: rgb(30, 35, 41);*/
-     background: rgb(18, 24, 29);
-     color: white;
-     min-width: 20em;
-     margin-top: 3.5em;
-     border-left: 1px solid rgba(44, 44, 44, 0.46);
-     padding: 1em;
-     text-align: left;
-     box-shadow: 0 1px 4px black;
-     height: 60em;
+     /*float: right;*/
+
+     /*grid-column: 6;*/
+     /*min-height: 45em;*/
+     grid-area: sidebar;
+     .artist{
+         height: 100%;
+         background: rgb(18, 24, 29);
+         color: white;
+         /*min-width: 20em;*/
+         margin-top: 3.5em;
+         border-left: 1px solid rgba(44, 44, 44, 0.46);
+         padding: 1em;
+         text-align: left;
+         box-shadow: 0 1px 4px black;
+
+     }
+
+
 
  }
 

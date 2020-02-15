@@ -1,21 +1,25 @@
 <template>
   <div id="albums">
-    <top-songs-container/>
-    <h1>New albums & Singles</h1>
+    <section id="album-details">
+      <top-songs-container/>
+      <h1>New albums & Singles</h1>
 
-    <sui-card-group :items-per-row="5" class="card-group"  >
-      <album-item v-for="song in music"
-                  v-bind:key="song.id"
-                  :image="song.image"
-                  :mp3="song.mp3"
-                  :title="song.title"
-                  :artist="song.artist"
-      />
+      <sui-card-group :items-per-row="5" class="card-group"  >
+        <album-item v-for="song in music"
+                    v-bind:key="song.id"
+                    :image="song.image"
+                    :mp3="song.mp3"
+                    :title="song.title"
+                    :artist="song.artist"
+        />
 
 
 
 
-    </sui-card-group>
+      </sui-card-group>
+
+
+    </section>
 
 
   </div>
@@ -44,13 +48,19 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   #albums {
-    max-width: 62%;
+    //grid-column: 2/5;
+    grid-area: body;
+    max-width: 90%;
     margin: 0 auto;
-    height: 60em;
-    overflow-y: auto;
-    overflow-x: hidden;
+    #album-details{
+
+      margin: 0 auto;
+       height: 60em;
+        overflow-y: auto;
+      overflow-x: hidden;
+    }
   }
   .card-group{
     padding: 1em;

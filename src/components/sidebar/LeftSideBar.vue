@@ -1,19 +1,23 @@
 <template>
-    <aside class="sidebar">
+    <aside id="left-sidebar">
+        <div id="left-sidebar-details">
+            <div class="artist-image">
+                <sui-image
+                        :src="artistImage"
+                        size="small"
+                        circular
+                />
+            </div>
+            <article>
+                <h5>Current Song</h5>
+                <h6>Remember Christ</h6>
+            </article>
 
-        <div class="artist-image">
-            <sui-image
-                    :src="artistImage"
-                    size="small"
-                    circular
-            />
+
         </div>
-        <article>
-            <h5>Current Song</h5>
-            <h6>Remember Christ</h6>
-        </article>
 
     </aside>
+
 </template>
 
 <script>
@@ -27,20 +31,24 @@
     }
 </script>
 
-<style scoped>
-    .sidebar{
-        float: left;
-        background: rgb(18, 24, 29);
-        color: white;
-        min-width: 20em;
-        margin-top: 3.5em;
-        border-left: 1px solid rgba(44, 44, 44, 0.46);
-        padding: 1em;
-        text-align: center;
-        box-shadow: 0 1px 4px black;
+<style lang="scss" scoped>
+    #left-sidebar{
+
         height: 60em;
-
-
+        /*grid-column: 1;*/
+        grid-area: leftsidebar;
+        #left-sidebar-details{
+            height: 100%;
+            float: left;
+            background: rgb(18, 24, 29);
+            color: white;
+            min-width: 20em;
+            margin-top: 3.5em;
+            border-left: 1px solid rgba(44, 44, 44, 0.46);
+            padding: 1em;
+            text-align: center;
+            box-shadow: 0 1px 4px black;
+        }
     }
     h2{
         margin-bottom: 2em;

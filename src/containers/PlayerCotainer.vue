@@ -28,6 +28,7 @@
         name:'PlayerContainer',
         computed:{
             showPlayer(){
+                // return true
                 return this.$store.state.showPlayer
             },
             volume(){
@@ -48,30 +49,35 @@
 
 <style lang="scss" scoped>
 
-    body
-    {
-        margin:0 auto;
-        padding:0px;
-        font-family:helvetica;
+    /*body*/
+    /*{*/
+    /*    margin:0 auto;*/
+    /*    padding:0px;*/
+    /*    font-family:helvetica;*/
 
-    }
+    /*}*/
 
     .show{
+        overflow: auto;
         bottom: 0 !important;
-        transition: all 1ms ease-in-out;
+
     }
 
     #wrapper
     {
+        grid-area: player;
+        //grid-column: 1/6;
         width:100vw;
-        height: 8em;
+
         position: fixed;
         bottom: -8em;
+
+        overflow: hidden;
         text-align:center;
-        margin:0 auto;
         padding:0;
         background: linear-gradient(-90deg, #1d1d1d, #343434,#1d1d1d,);
         transition: all 1s ease-in-out;
+
     }
     #player
     {
