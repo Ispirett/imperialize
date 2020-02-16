@@ -2,26 +2,27 @@
   <div id="app">
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
     <left-side-bar/>
-     <AlbumContainer/>
+     <center-container/>
       <side-bar />
       <player-container/>
   </div>
 </template>
 
 <script>
-import AlbumContainer from "./containers/AlbumContainer";
+
 // import UserForm from "./components/UserForm.vue";
 import SideBar from "./components/sidebar/SideBar";
 import LeftSideBar from "./components/sidebar/LeftSideBar";
 import PlayerContainer from "./containers/PlayerCotainer";
 import store from './store/index'
+import CenterContainer from "./containers/CenterContainer";
 export default {
   name: 'App',
     store,
   components: {
+      CenterContainer,
       PlayerContainer,
       LeftSideBar,
-    AlbumContainer,
     SideBar
   }
 }
@@ -30,16 +31,15 @@ export default {
 <style lang="scss">
   body{
     margin: 0;
-    /*max-height: 100vh;*/
-   background: rgb(30, 35, 41) !important;
+      background: linear-gradient(-90deg, #1d1d1d, #343434,#1d1d1d,) !important;
   }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  color: white;
-  background: rgb(30, 35, 41);
+  color: lightgray;
+  /*background: rgb(30, 35, 41);*/
   display: grid;
 
     grid-template-columns: 20em 97em 20em;

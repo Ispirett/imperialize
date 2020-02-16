@@ -25,17 +25,12 @@
 
 <style lang="scss" scoped>
  #sidebar{
-     /*float: right;*/
-
-     /*grid-column: 6;*/
-     /*min-height: 45em;*/
      grid-area: sidebar;
      .artist{
          height: 100%;
          background: rgb(18, 24, 29);
          color: white;
-         /*min-width: 20em;*/
-         margin-top: 3.5em;
+         /*margin-top: 3.5em;*/
          border-left: 1px solid rgba(44, 44, 44, 0.46);
          padding: 1em;
          text-align: left;

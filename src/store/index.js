@@ -5,6 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    centerComponent: 'AlbumContainer',
     fileSource: 'https://cdns-preview-e.dzcdn.net/stream/c-e1b78fb28633b45fd0a4b35478386198-7.mp3',
     currentTime: 0,
     trackDuration: 0,
@@ -70,6 +71,10 @@ export default new Vuex.Store({
     },
     updateVolume(state,value){
       state.volume = value
+    },
+    updateCenterContainer(state,value){
+      console.log('hey')
+      state.centerComponent = value
     }
   },
   actions: {

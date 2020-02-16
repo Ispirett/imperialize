@@ -48,25 +48,15 @@
 </script>
 
 <style lang="scss" scoped>
-
-    /*body*/
-    /*{*/
-    /*    margin:0 auto;*/
-    /*    padding:0px;*/
-    /*    font-family:helvetica;*/
-
-    /*}*/
-
-    .show{
+    .show {
         overflow: auto;
         bottom: 0 !important;
 
     }
-
     #wrapper
     {
         grid-area: player;
-        //grid-column: 1/6;
+        border-top: 5px solid #003757 !important;
         width:100vw;
 
         position: fixed;
@@ -75,12 +65,13 @@
         overflow: hidden;
         text-align:center;
         padding:0;
-        background: linear-gradient(-90deg, #1d1d1d, #343434,#1d1d1d,);
+        background: linear-gradient(-90deg, #0f0f0f, #343434, #0f0f0f,);
         transition: all 1s ease-in-out;
 
     }
     #player
     {
+
         color: white;
         display: flex;
         flex-direction: row;
