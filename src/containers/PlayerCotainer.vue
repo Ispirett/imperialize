@@ -10,8 +10,10 @@
              <player-buttons/>
 
             <div>
-                <img src="https://img.favpng.com/0/18/16/volume-computer-icons-sound-icon-blue-orange-png-favpng-XqsMMyAsWPv0vQjgRR8a8ddDe.jpg" id="vol_img">
-                <input type="range" id="change_vol"  @input="tester($event.target.value)" step="0.05" min="0" max="1" :value="volume">
+                <sui-icon name="volume up" v-if="volume >= 0.5" size="large"/>
+                <sui-icon name="volume down" v-if="volume < 0.5 & volume > 0.1 " size="large"/>
+                <sui-icon name="volume off" v-if="volume < 0.1" size="large"/>
+                <input type="range" id="change_vol"  @input="updateVolume($event.target.value)" step="0.01" min="0" max="1" :value="volume">
             </div>
 
 
@@ -36,10 +38,9 @@
             }
         },
         methods:{
-            tester(value){
+            updateVolume(value){
               this.$store.commit('updateVolume',value);
               document.getElementById('i-player').volume = this.volume;
-                console.log(this.volume)
             }
         },
         components: {PlayerAudio, PlayerButtons},

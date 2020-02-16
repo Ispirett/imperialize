@@ -1,6 +1,10 @@
 # Imperialize
 
-#### Simple wallet built with vue
+#### music application built with vue
+![Image description](imperialize.png)
+
+
+
 
 ## Getting Started
 
