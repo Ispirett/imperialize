@@ -9,7 +9,9 @@ export default {
     image: String,
     mp3: String,
     title: String,
-    artist: String
+    artist: String,
+    album:String,
+    time:String,
   },
   methods: {
     playSong() {

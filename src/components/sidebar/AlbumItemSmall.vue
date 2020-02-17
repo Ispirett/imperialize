@@ -18,7 +18,7 @@
 
                 <sui-card-content>
                     <sui-card-header class="text-white">{{ title || 'song title'}}</sui-card-header>
-                    <sui-card-meta class="text-grey">{{ Artist || 'Artist'}}</sui-card-meta>
+                    <sui-card-meta class="text-grey">{{ artist || 'Artist'}}</sui-card-meta>
                 </sui-card-content>
 
             </sui-card>
