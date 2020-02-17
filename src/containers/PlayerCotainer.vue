@@ -58,7 +58,7 @@
     {
         grid-area: player;
         border-top: 5px solid #003757 !important;
-        width:100vw;
+        width:100%;
 
         position: fixed;
         bottom: -8em;

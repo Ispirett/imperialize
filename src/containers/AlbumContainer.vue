@@ -52,6 +52,7 @@
 
         margin: 0 auto;
         height: 60em;
+        max-width: 95em;
         overflow-y: auto;
         overflow-x: hidden;
     }

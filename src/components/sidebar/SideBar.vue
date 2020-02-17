@@ -27,8 +27,8 @@ export default {
   .artist {
     height: 100%;
     background: rgb(18, 24, 29);
-    color: white;
-    /*margin-top: 3.5em;*/
+
+    color: lightgrey;
     border-left: 1px solid rgba(44, 44, 44, 0.46);
     padding: 1em;
     text-align: left;

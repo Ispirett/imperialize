@@ -68,11 +68,9 @@
         box-shadow: 0 1px 4px black;
         grid-area: leftsidebar;
         #left-sidebar-details{
-            /*height: 100%;*/
-            float: left;
 
             color: white;
-            min-width: 20em;
+            /*min-width: 20em;*/
             margin-top: 3.5em;
             border-left: 1px solid rgba(44, 44, 44, 0.46);
             padding: 1em;

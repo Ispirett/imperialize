@@ -3,7 +3,7 @@
         <h1>
             All Songs
         </h1>
-        <sui-table striped inverted>
+        <sui-table striped inverted >
             <sui-table-header>
                 <sui-table-row>
                     <sui-table-header-cell>Title</sui-table-header-cell>
@@ -47,6 +47,7 @@
 <style lang="scss" scoped>
     .wrapper{
         padding: 1em;
+        min-width: 96.7em;
     }
     tr,td{
         &:hover{
