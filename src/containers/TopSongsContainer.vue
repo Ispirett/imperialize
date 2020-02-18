@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import AlbumItemSmall from "../components/sidebar/AlbumItemSmall";
+import AlbumItemSmall from "../components/AlbumItemSmall";
 export default {
   name: "TopSongsContainer",
   computed: {

@@ -16,8 +16,12 @@
 
         </div>
         <section class="left-sidebar-items">
+            <article class="item-title">
+                <h4>Your music</h4>
+                <song-form/>
 
-            <h4>Your music</h4>
+            </article>
+
             <sui-list class="list">
                 <sui-list-item
                         v-on:click="swapCenterComponent('HomeContainer')"
@@ -45,8 +49,10 @@
 </template>
 
 <script>
+    import SongForm from "./SongForm";
     export default {
         name: "LeftSideBar",
+        components: {SongForm},
         computed:{
             artistImage(){
                 return this.$store.state.leftSideBar.artistImage
@@ -77,6 +83,11 @@
             text-align: center;
 
         }
+    }
+    .item-title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
     .left-sidebar-items{
         padding-left: 2em;

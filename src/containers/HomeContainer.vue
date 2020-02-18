@@ -61,6 +61,7 @@ import TopRated from "../components/home/TopRated";
 import TopSongs from "../components/home/TopSongs";
 import MostPlayed from "../components/home/MostPlayed";
 import NewSongs from "../components/home/NewSongs";
+
 export default {
   name: "HomeContainer",
   components: { NewSongs, MostPlayed, TopSongs, TopRated },
@@ -85,28 +86,26 @@ export default {
   }
 }
 
-.top-songs{
-    h4{
-        color: peru;
-    }
+.top-songs {
+  h4 {
+    color: peru;
+  }
 }
-.top-rated{
-    h4{
-        color: lightseagreen;
-    }
+.top-rated {
+  h4 {
+    color: lightseagreen;
+  }
 }
-.new-songs{
-    h4{
-        color: lightcoral;
-    }
+.new-songs {
+  h4 {
+    color: lightcoral;
+  }
 }
-.most-played{
-    h4{
-        color: purple;
-    }
+.most-played {
+  h4 {
+    color: purple;
+  }
 }
-
-
 
 .music-sections {
   display: flex;

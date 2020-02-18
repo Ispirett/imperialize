@@ -7,28 +7,36 @@
 </template>
 
 <script>
-
 import AlbumContainer from "./AlbumContainer";
 import AllSongsContainer from "./AllSongsContainer";
 import HomeContainer from "./HomeContainer";
+import { db } from "../utilities/firebase";
 export default {
   name: "CenterContainer",
-  components: {HomeContainer, AllSongsContainer, AlbumContainer},
-  computed:{
-    centerComponent(){
-      return this.$store.state.centerComponent
+  created() {
+    const songs = [];
+    db.collection("music")
+      .get()
+      .then(snap => {
+        snap.docs.map(song => {
+          songs.push(song.data());
+          this.$store.commit("updateMusic", songs);
+        });
+      });
+  },
+  components: { HomeContainer, AllSongsContainer, AlbumContainer },
+  computed: {
+    centerComponent() {
+      return this.$store.state.centerComponent;
     }
   }
-
 };
 </script>
 
 <style lang="scss" scoped>
-  #center-container {
-    //grid-column: 2/5;
-    grid-area: body;
-    /*max-width: 90%;*/
-  }
-
-
+#center-container {
+  //grid-column: 2/5;
+  grid-area: body;
+  /*max-width: 90%;*/
+}
 </style>
