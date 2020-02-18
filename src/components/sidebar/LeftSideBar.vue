@@ -3,14 +3,14 @@
         <div id="left-sidebar-details">
             <div class="artist-image">
                 <sui-image
-                        :src="artistImage"
+                        :src="currentTrack.image"
                         size="small"
                         circular
                 />
             </div>
             <article>
-                <h5>Current Song</h5>
-                <h6>Remember Christ</h6>
+                <h5>{{currentTrack.title}}</h5>
+                <h6>{{currentTrack.artist}}</h6>
             </article>
 
 
@@ -54,8 +54,8 @@
         name: "LeftSideBar",
         components: {SongForm},
         computed:{
-            artistImage(){
-                return this.$store.state.leftSideBar.artistImage
+            currentTrack(){
+                return this.$store.state.currentTrack
             },
         },
         methods:{

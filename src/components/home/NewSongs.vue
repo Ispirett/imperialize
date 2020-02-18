@@ -23,12 +23,6 @@ import trackControls from "../../mixins/trackControls";
 
 export default {
   name: "NewSongs",
-  props: {
-    image: String,
-    mp3: String,
-    title: String,
-    artist: String
-  },
   mixins: [trackControls]
 };
 </script>
@@ -54,6 +48,7 @@ export default {
     margin-right: 1em;
     img {
       width: 100%;
+      height: 100%;
     }
   }
 }

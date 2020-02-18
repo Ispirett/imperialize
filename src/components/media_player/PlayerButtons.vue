@@ -49,7 +49,7 @@ export default {
 
 <style lang="scss" scoped>
 #media-container {
-  margin-left: 10em;
+  /*margin-left: 5em;*/
   display: flex;
   flex-direction: column;
   justify-content: center;

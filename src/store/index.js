@@ -9,12 +9,20 @@ import {vuexfireMutations,firebaseAction} from "vuexfire";
 export default new Vuex.Store({
   state: {
     centerComponent: 'HomeContainer',
-    fileSource: 'https://cdns-preview-e.dzcdn.net/stream/c-e1b78fb28633b45fd0a4b35478386198-7.mp3',
+    fileSource: '',
     currentTime: 0,
     trackDuration: 0,
     volume: 1,
     leftSideBar: {
       artistImage:'https://thegospelguru.com/wp-content/uploads/2017/06/81VIIvooGL._SL1500_.jpg'
+    },
+    currentTrack:{
+      image: '',
+      mp3: '',
+      title:'',
+      artist: '',
+      album:'',
+      time:'',
     },
     showPlayer: false,
 
@@ -101,6 +109,9 @@ export default new Vuex.Store({
     },
     updateMusic(state, songs){
       state.music = songs
+    },
+    updateCurrentTrack(state,track){
+      state.currentTrack = track
     }
 
   },

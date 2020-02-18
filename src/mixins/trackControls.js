@@ -19,7 +19,8 @@ export default {
       const player = document.getElementById("i-player");
       const playerContainer = document.getElementById("player");
       playerContainer.classList.add("show");
-
+      // store update
+      commit('updateCurrentTrack',this.$props);
       commit("updateShowPlayer", true);
       commit("loadSong", this.$props.mp3);
       commit("updateSideBarArtistImage", this.$props.image);
@@ -35,6 +36,7 @@ export default {
       }, 1000);
 
       commit("updateDuration", player.duration);
+
       player.load();
       player.play();
     }
