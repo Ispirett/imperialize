@@ -99,21 +99,7 @@ export default {
           });
         }
       );
-      // const all_songs = storage.ref().child(`all_songs/${this.mp3.name}`).put(this.mp3);
-      //
-      //  all_songs.on('state_changed',(snapshot)=>{
-      //  let progress = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
-      //   this.progress = progress;
-      //
-      // }, (error) => error, ()=> {
-      //
-      //    all_songs.snapshot.ref.getDownloadURL().then(url=>{
-      //      console.log(url);
-      //      this.mp3Url = url;
-      //
-      //    });
-      //
-      // })
+      this.$store.dispatch('bindMusic')
     },
     mp3Preview(e) {
       this.mp3 = e.target.files[0];

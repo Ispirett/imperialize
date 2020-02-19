@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex);
 import {db} from "../utilities/firebase";
-import {vuexfireMutations,firebaseAction} from "vuexfire";
+import {vuexfireMutations,firestoreAction} from "vuexfire";
 
 
 
@@ -116,8 +116,8 @@ export default new Vuex.Store({
 
   },
   actions: {
-    bindMusicRef: firebaseAction(({bindFirebaseRef}) => {
-     return bindFirebaseRef('music', db.collection('music'))
+    bindMusic: firestoreAction(({bindFirestoreRef}) => {
+     return bindFirestoreRef('music', db.collection('music'))
     })
   },
   modules: {
