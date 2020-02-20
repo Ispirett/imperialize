@@ -4,9 +4,9 @@
       @mouseenter.native="cardOneActive = true"
       @mouseleave.native="cardOneActive = false"
     >
-      <sui-image :src="image" />
+      <sui-image :src="image" height="200px" width="100%" />
       <sui-dimmer blurring :active="cardOneActive">
-        <sui-button @click="playSong" inverted>
+        <sui-button @click="swapCenterComponent('AlbumSongsContainer')" inverted>
           <sui-icon-group size="huge">
             <sui-icon name="circle" size="big" outline />
             <sui-icon name="play" size="small" />
@@ -27,9 +27,17 @@
 
 <script>
 import trackControls from "../mixins/trackControls";
+
+
 export default {
   name: "AlbumItem",
-  mixins: [trackControls]
+  mixins: [trackControls],
+  methods:{
+    swapCenterComponent(value){
+      this.$store.dispatch('bindAlbumSongs',this.$props.album);
+      this.$store.commit('updateCenterContainer',value)
+    }
+  }
 };
 </script>
 <style scoped>

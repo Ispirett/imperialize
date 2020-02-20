@@ -10,6 +10,7 @@
           :title="song.title"
           :artist="song.artist"
           :mp3="song.mp3"
+          :album="song.album"
         />
       </sui-card-group>
     </div>

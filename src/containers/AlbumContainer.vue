@@ -6,17 +6,14 @@
         <h1>New albums & Singles</h1>
         <sui-card-group :items-per-row="5" class="card-group"  >
 
-
             <album-item v-for="song in music"
                         v-bind:key="song.id"
                         :image="song.image"
                         :mp3="song.mp3"
                         :title="song.title"
                         :artist="song.artist"
+                        :album="song.album"
             />
-
-
-
 
         </sui-card-group>
 
