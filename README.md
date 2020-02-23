@@ -20,13 +20,21 @@ node
 
 ### Installing
 ```
-yarn install
+yarn install or npm install
 ```
 
 
 ### Up and running
+* create .env file in root directory.
+add firebase credentials in .env file.
+#### example:
 ```
-yarn serve
+ VUE_APP_API_KEY=key goes here
+ VUE_APP_AUTH_DOMAIN=key goes here
+```
+
+```
+yarn serve or npm run serve
 
 ```
 
