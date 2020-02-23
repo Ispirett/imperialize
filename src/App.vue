@@ -12,7 +12,7 @@
 // import UserForm from "./components/UserForm.vue";
 import SideBar from "./components/sidebar/SideBar";
 import LeftSideBar from "./components/sidebar/LeftSideBar";
-import PlayerContainer from "./containers/PlayerCotainer";
+import PlayerContainer from "./containers/PlayerContainer";
 import store from "./store/index";
 import CenterContainer from "./containers/CenterContainer";
 export default {

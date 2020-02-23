@@ -8,7 +8,7 @@
 </template>
 
 <script>
-    import trackControls from "../mixins/trackControls";
+    import trackControls from "../../mixins/trackControls";
 
     export default {
         name: "AlbumSongs",

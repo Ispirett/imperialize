@@ -1,7 +1,7 @@
 <template>
     <section class="wrapper">
         <h1>
-            {{albumName}}
+            {{currentAlbum || "AlbumName"}}
         </h1>
         <sui-table striped inverted >
             <sui-table-header>
@@ -34,27 +34,13 @@
     import songRow from "../components/all_songs/songRow";
     export default {
         name: "AlbumSongComponent",
-        data(){
-            return{
-                albumName: '',
-            }
-
-        },
-        created() {
-            if(this.music.length !== 0){
-                this.updateAlbumName(this.music[0].album);
-            }
-
-        },
         components:{songRow},
-        methods:{
-          updateAlbumName(value){
-              this.albumName = value + '-- Album'
-          }
-        },
         computed:{
             music(){
                 return this.$store.state.albumSongs;
+            },
+            currentAlbum(){
+                return this.$store.state.currentAlbum.name
             }
         }
     }

@@ -25,11 +25,12 @@
 </template>
 
 <script>
-    import trackControls from "../mixins/trackControls";
+    import trackControls from "../../mixins/trackControls";
     export default {
         name: 'AlbumItemSmall',
         methods:{
             swapCenterComponent(value){
+                this.$store.commit('updateCurrentAlbum', "Working");
                 this.$store.dispatch('bindAlbumSongs',this.$props.album);
                 this.$store.commit('updateCenterContainer',value)
             }

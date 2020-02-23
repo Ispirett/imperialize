@@ -23,7 +23,7 @@
 </template>
 
 <script>
-    import AlbumItem from "../components/AlbumItem";
+    import AlbumItem from "../components/album/AlbumItem";
     import TopSongsContainer from "./TopSongsContainer";
 
     // import Album from "../components/Album";

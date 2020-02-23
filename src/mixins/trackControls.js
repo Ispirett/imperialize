@@ -25,7 +25,6 @@ export default {
       commit("loadSong", this.$props.mp3);
       commit("updateSideBarArtistImage", this.$props.image);
       commit("updateCurrentTime", player.currentTime);
-
       const seeker = setInterval(() => {
         console.log("current time");
         commit("updateCurrentTime", player.currentTime);

@@ -15,6 +15,9 @@ export default new Vuex.Store({
       artistImage:
         "https://thegospelguru.com/wp-content/uploads/2017/06/81VIIvooGL._SL1500_.jpg"
     },
+    currentAlbum:{
+      name:''
+    },
     currentTrack: {
       image: "",
       mp3: "",
@@ -68,6 +71,9 @@ export default new Vuex.Store({
     updateCurrentTrack(state, track) {
       state.currentTrack = track;
     },
+    updateCurrentAlbum(state, name){
+      state.currentAlbum.name = name
+    }
   },
   actions: {
     bindMusic: firestoreAction(({ bindFirestoreRef }) => {

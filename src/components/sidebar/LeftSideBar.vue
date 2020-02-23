@@ -116,9 +116,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 2em 0 2em  0;
+        padding: 1.5em 0 1.5em  0;
         background-color: #292929;
         border-radius: 50%;
         margin-bottom: 1em;
+        min-height: 15em;
+        max-height: 15em;
     }
 </style>
