@@ -1,23 +1,19 @@
 <template>
   <div id="media-container">
     <div id="media-buttons">
-      <input
-        type="image"
-        src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Crystal_Project_Player_pause.png"
-        v-on:click="pause()"
-        id="pause_button"
-      />
-      <input
-              type="image"
-              src="https://upload.wikimedia.org/wikipedia/commons/9/96/Crystal_Project_Player_play.png"
-              v-on:click="play()"
-              id="play_button"
-      />
+
       <input
         type="image"
         src="https://pngimage.net/wp-content/uploads/2018/05/button-stop-png.png"
         v-on:click="stop()"
         id="stop_button"
+      />
+
+      <input
+              type="image"
+              v-bind:src="playStateImage"
+              v-on:click="playPause"
+              id="play_button"
       />
 
       <button id="repeat-button" @click="repeat()" v-bind:class="buttonActive">
@@ -55,6 +51,9 @@ export default {
       else{
         return ""
       }
+    },
+    playStateImage(){
+      return this.$store.state.playerControls.playStateImage
     }
 
   },

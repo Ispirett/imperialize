@@ -21,6 +21,7 @@ export default new Vuex.Store({
     playerControls:{
       repeat: false,
       isPlaying: false,
+      playStateImage: 'https://upload.wikimedia.org/wikipedia/commons/9/96/Crystal_Project_Player_play.png'
     },
     currentTrack: {
       image: "",
@@ -83,6 +84,10 @@ export default new Vuex.Store({
     },
     updateIsPlaying(state){
       state.playerControls.isPlaying = !state.playerControls.playing
+    },
+    updatePlayStateImage(state, image){
+      state.playerControls.playStateImage = image
+      console.log(image )
     }
   },
   actions: {

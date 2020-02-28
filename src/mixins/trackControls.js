@@ -25,6 +25,7 @@ export default {
       commit("loadSong", this.$props.mp3);
       commit("updateSideBarArtistImage", this.$props.image);
       commit("updateCurrentTime", player.currentTime);
+      this.$store.commit('updatePlayStateImage','https://upload.wikimedia.org/wikipedia/commons/d/dd/Crystal_Project_Player_pause.png')
       const seeker = setInterval(() => {
         console.log("current time");
         commit("updateCurrentTime", player.currentTime);
