@@ -19,7 +19,8 @@ export default new Vuex.Store({
       name:''
     },
     playerControls:{
-      repeat: false
+      repeat: false,
+      isPlaying: false,
     },
     currentTrack: {
       image: "",
@@ -79,7 +80,9 @@ export default new Vuex.Store({
     },
     updateRepeat(state){
       state.playerControls.repeat = !state.playerControls.repeat
-      console.log(state.playerControls.repeat)
+    },
+    updateIsPlaying(state){
+      state.playerControls.isPlaying = !state.playerControls.playing
     }
   },
   actions: {

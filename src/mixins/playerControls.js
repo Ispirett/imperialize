@@ -3,6 +3,7 @@ export default {
     play() {
       const player = document.getElementById("i-player");
       player.play();
+      this.$store.commit('updateIsPlaying');
       console.log("play", player.duration);
     },
     pause() {
@@ -18,9 +19,9 @@ export default {
     },
     repeat(){
       const player = document.getElementById('i-player');
-      const repeat =this.$store.state.playerControls.repeat;
       this.$store.commit('updateRepeat');
-      player.loop = repeat
+      player.loop = this.$store.state.playerControls.repeat;
+      console.info(this.$store.state.playerControls.repeat)
     }
   }
 };

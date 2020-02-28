@@ -1,5 +1,5 @@
 <template>
-    <audio id="i-player" >
+    <audio id="i-player" class="hide" >
         <source :src="fileSource" id="file-source"/>
     </audio>
 
@@ -17,6 +17,8 @@
     }
 </script>
 
-<!--<style scoped>-->
-
-<!--</style>-->
+<style scoped>
+ .hide{
+     display: none;
+ }
+</style>
