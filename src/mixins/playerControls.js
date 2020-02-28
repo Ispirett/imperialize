@@ -15,6 +15,12 @@ export default {
       this.$store.commit("updateCurrentTime", 0);
       this.$store.commit("updateDuration", 0);
       this.$store.commit("updateShowPlayer", false);
+    },
+    repeat(){
+      const player = document.getElementById('i-player');
+      const repeat =this.$store.state.playerControls.repeat;
+      this.$store.commit('updateRepeat');
+      player.loop = repeat
     }
   }
 };

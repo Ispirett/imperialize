@@ -18,6 +18,9 @@ export default new Vuex.Store({
     currentAlbum:{
       name:''
     },
+    playerControls:{
+      repeat: false
+    },
     currentTrack: {
       image: "",
       mp3: "",
@@ -73,6 +76,10 @@ export default new Vuex.Store({
     },
     updateCurrentAlbum(state, name){
       state.currentAlbum.name = name
+    },
+    updateRepeat(state){
+      state.playerControls.repeat = !state.playerControls.repeat
+      console.log(state.playerControls.repeat)
     }
   },
   actions: {

@@ -19,6 +19,13 @@
         v-on:click="stop()"
         id="stop_button"
       />
+
+      <button id="repeat-button" @click="repeat()" v-bind:class="buttonActive">
+        <sui-icon name="repeat" size="large"/>
+      </button>
+
+
+
     </div>
     <div id="media-seek">
       <span id="seek-current-time">
@@ -40,6 +47,14 @@ export default {
     },
     trackDuration(){
       return this.$store.state.trackDuration
+    },
+    buttonActive(){
+      if(this.$store.state.playerControls.repeat){
+        return "active"
+      }
+      else{
+        return ""
+      }
     }
 
   },
@@ -48,6 +63,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .active{
+    color: #155480 !important;
+  }
 #media-container {
   /*margin-left: 5em;*/
   display: flex;
@@ -55,6 +73,10 @@ export default {
   justify-content: center;
   align-items: center;
   #media-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 1em;
   }
 
@@ -94,5 +116,12 @@ input[type="image"]
 }
   #play_button{
     height: 40px;
+  }
+
+  #repeat-button{
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
   }
 </style>

@@ -42,6 +42,7 @@
             currentAlbum(){
                 return this.$store.state.currentAlbum.name
             }
+
         }
     }
 </script>
