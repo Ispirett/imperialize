@@ -39,6 +39,12 @@ export default {
 
       player.load();
       player.play();
+    },
+    title_short(){
+      const title = this.$props.title;
+      if(title.length > 10){
+       return  title.slice(0, 10)
+      }
     }
   }
 };

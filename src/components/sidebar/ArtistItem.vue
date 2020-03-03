@@ -1,13 +1,13 @@
 <template>
     <div class="artist">
         <section class="artist-header">
-            <img class="img" src="https://2.bp.blogspot.com/-2HDpDzR0hDA/UPlsuG5N0wI/AAAAAAAAE7o/bCkI_NMgADA/s640/IMG_0376.JPG" alt="image">
-            <h5 class="artist-name">Brother D</h5>
-            <span class="artist-song">20</span>
+            <img class="img" :src="image" alt="image">
+            <h5 class="artist-name">{{artist}}</h5>
+            <small class="artist-song">{{plays}}</small>
         </section>
         <section class="artist-body">
-            <h5>name of album</h5>
-            <h6>name of song</h6>
+            <h5>{{albumName}}</h5>
+            <h6>{{songName}}</h6>
         </section>
 
     </div>
@@ -15,7 +15,15 @@
 
 <script>
     export default {
-        name: "ArtistItem"
+        name: "ArtistItem",
+        props:{
+            artist: String,
+            plays: String,
+            albumName: String,
+            songName:String,
+            image:String
+
+        }
     }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
     <section class="wrapper">
         <h1>
-            {{currentAlbum || "AlbumName"}}
+            {{currentAlbum.name || "AlbumName"}}
         </h1>
         <sui-table striped inverted >
             <sui-table-header>
@@ -40,7 +40,7 @@
                 return this.$store.state.albumSongs;
             },
             currentAlbum(){
-                return this.$store.state.currentAlbum.name
+                return this.$store.state.currentAlbum
             }
 
         }

@@ -14,6 +14,7 @@
           :image="song.image"
           :mp3="song.mp3"
           :title="song.title"
+          :artist="song.artist"
         />
       </section>
 
@@ -25,6 +26,7 @@
           :image="song.image"
           :mp3="song.mp3"
           :title="song.title"
+          :artist="song.artist"
         />
       </section>
     </div>
@@ -38,6 +40,7 @@
           :image="song.image"
           :mp3="song.mp3"
           :title="song.title"
+          :artist="song.artist"
         />
       </section>
 
@@ -49,6 +52,7 @@
           :image="song.image"
           :mp3="song.mp3"
           :title="song.title"
+          :artist="song.artist"
         />
       </section>
     </div>

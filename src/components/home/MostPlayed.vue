@@ -14,7 +14,7 @@
       </sui-dimmer-dimmable>
       <article>
         <h4>{{ title || "This is the title" }}</h4>
-        <p>{{ artist || "This is album" }}</p>
+        <p>{{ artist || "artist" }}</p>
       </article>
     </div>
 </template>

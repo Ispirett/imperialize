@@ -17,7 +17,7 @@
                 </sui-dimmer-dimmable>
 
                 <sui-card-content>
-                    <sui-card-header class="text-white">{{ title || 'song title'}}</sui-card-header>
+                    <sui-card-header class="text-white">{{ album || 'song title'}}</sui-card-header>
                     <sui-card-meta class="text-grey">{{ artist || 'Artist'}}</sui-card-meta>
                 </sui-card-content>
 
@@ -30,7 +30,7 @@
         name: 'AlbumItemSmall',
         methods:{
             swapCenterComponent(value){
-                this.$store.commit('updateCurrentAlbum', "Working");
+                this.$store.commit('updateCurrentAlbum', this.$store.album);
                 this.$store.dispatch('bindAlbumSongs',this.$props.album);
                 this.$store.commit('updateCenterContainer',value)
             }

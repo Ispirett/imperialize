@@ -124,7 +124,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
     align-items: center;
-    max-width: 20em;
+    width: 16em;
   img {
     height: 60px;
     width: 60px;

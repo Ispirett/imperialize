@@ -18,7 +18,7 @@
     <sui-card-content class="rating-bg" extra>
       <!--            Rating:  <sui-rating :rating="4" :max-rating="5" />-->
       <sui-card-header class="text-white">{{
-        title || "Name of Song"
+        album || "Name of Song"
       }}</sui-card-header>
       <sui-card-meta class="text-grey">{{ artist || "Artist" }}</sui-card-meta>
     </sui-card-content>
@@ -34,7 +34,7 @@ export default {
   mixins: [trackControls],
   methods:{
     swapCenterComponent(value){
-      this.$store.commit('updateCurrentAlbum', this.$props.ablum)
+      this.$store.commit('updateCurrentAlbum', this.$props.ablum);
       this.$store.dispatch('bindAlbumSongs',this.$props.album);
       this.$store.commit('updateCenterContainer',value)
     }

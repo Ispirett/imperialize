@@ -1,6 +1,5 @@
 import firebase from "firebase";
 import 'firebase/firebase'
-console.table(process.env)
 const firebaseConfig = {
     apiKey: process.env.VUE_APP_API_KEY,
     authDomain: process.env.VUE_APP_AUTH_DOMAIN,
@@ -34,7 +33,7 @@ const storageUploader = (data ={},progressCallBack,complete) =>{
 
     }, (error) => error, ()=> {
         filePath.snapshot.ref.getDownloadURL().then(url=>{
-            console.log(url);
+            // console.log(url);
             complete(url)
 
         });
