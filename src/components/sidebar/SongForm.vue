@@ -1,6 +1,9 @@
 <template>
   <div>
-    <sui-button @click.native="toggle" slot="trigger" icon="add" size="mini" />
+    <sui-popup  content="You can add a new song here!" inverted>
+      <sui-button @click.native="toggle" slot="trigger" icon="add" size="mini" />
+    </sui-popup>
+
 
     <sui-modal v-model="open">
       <sui-modal-header>ADD SONG</sui-modal-header>
