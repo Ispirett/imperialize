@@ -38,19 +38,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: lightgray;
   /*background: rgb(30, 35, 41);*/
-  display: grid;
+  display: flex;
+  /*grid-template-columns: 20em auto 20em;*/
+  /*grid-template-areas: "leftsidebar  body  sidebar";*/
+  /*  @media screen and (max-width: 1000px) {*/
+  /*      grid-template-columns: 1fr;*/
+  /*      grid-template-areas:*/
+  /*              "leftsidebar"*/
+  /*              "body"*/
+  /*              "sidebar"*/
+  /*  ;*/
 
-  grid-template-columns: 20em auto 20em;
-  grid-template-areas: "leftsidebar  body  sidebar";
-    @media screen and (max-width: 1000px) {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-                "leftsidebar"
-                "body"
-                "sidebar"
-    ;
-
-    }
+  /*  }*/
 }
 .main-bg {
   background: black;
